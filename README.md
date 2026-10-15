@@ -20,21 +20,26 @@ Landing page B2B da **Petra Sinter**, distribuidora 100% focada em lâminas sint
 
 | Token | Hex | Uso |
 |---|---|---|
-| Grafite | `#2C2F33` | Fundo escuro principal (theme-color do site atual) |
-| Grafite 2 | `#363A3F` | Seção de tecnologia |
-| Ouro do veio | `#B79662` | Acento, botões principais (mesmo ouro do site atual e do logo) |
-| Ouro claro | `#D3BC8F` | Hover e textos de destaque no escuro |
-| Pó de chapa | `#EDEDEB` | Fundo claro das seções de catálogo e garantia |
-| Branco | `#FAFAF8` | Fundo claro e texto no escuro |
+| Preto mármore | `#161615` | Fundo escuro principal, mesmo preto das barras do símbolo |
+| Preto 2 | `#1D1D1B` | Seção de tecnologia |
+| Ouro do veio | `#B79662` | Acento; botões com degradê metálico `#A8864F > #D8BE8A > #B08D55`, como o dourado do logo |
+| Ouro claro | `#D8BE8A` | Números do hero, hover e destaques no escuro |
+| Pó de chapa | `#F5F4F1` | Fundo claro das seções de catálogo e garantia |
+| Branco | `#FFFFFF` | Fundo claro e texto no escuro |
 
 - **Tipografia:** Montserrat (títulos), por ser a família mais próxima das letras do logo, como o cliente pediu no briefing; Inter (texto). Se a Pâmella confirmar a fonte exata do logo, troque no `<link>` do Google Fonts e na variável `--f-tit`.
 - **Fundo:** mesclado, como marcado no briefing (hero, tecnologia, formulário e rodapé escuros; modelo B2B, catálogo, passos, públicos, garantia e FAQ claros).
 - **Logo:** `assets/img/logo-petra-sinter.png` (grafite) e `logo-petra-sinter-branco.png` (branco com ouro), gerados a partir dos PDFs da pasta Logo.
-- **Elemento assinatura:** as três barras inclinadas do símbolo da marca viram as três "janelas" do hero, cada uma mostrando uma lâmina real do catálogo que troca a cada 5 s. O mesmo ângulo aparece nos marcadores, nos números do passo a passo e no selo de garantia.
+- **Elemento assinatura (v2):** o hero usa a lâmina Ouro Negro 8025 do próprio catálogo em tela cheia, preto com veio dourado, que é a mesma linguagem das barras do símbolo. A mesma textura aparece no selo de garantia e a Zênite Noturno no fundo do formulário. O ângulo das barras do logo aparece nos marcadores, nos números do passo a passo e no selo.
+
+## Histórico
+
+- v1 (15/10/2026): fundo grafite e hero com as três barras do símbolo mostrando lâminas.
+- v2 (15/10/2026): revisão do Malta. Headline trocada, fundo grafite substituído por preto mármore com veio dourado, seguindo a identidade do cliente.
 
 ## Estrutura da página
 
-1. Hero: "Lâmina sinterizada em chapa inteira para a sua marmoraria, com estoque perto de você." (contém "marmoraria" e "perto de você") + ficha rápida (formato, entrega, garantia, coleção)
+1. Hero: "Lâminas sinterizadas de alto padrão, com estoque a pronta entrega." (headline definida pelo Malta na revisão; a linha acima dela cita "para marmorarias") + coluna com 1 dia útil, 10 anos e 31 padrões
 2. Somos distribuidora, não marmoraria (deixa o modelo B2B claro nos primeiros segundos, pedido do briefing)
 3. Catálogo Classic com os 31 padrões, filtro por tom e toque para ver a lâmina aplicada no ambiente; cada padrão tem botão de WhatsApp com o nome e código
 4. Do pedido à bancada pronta (4 passos)
@@ -83,6 +88,7 @@ LP-Petra-Sinter/
     ├── js/main.js
     └── img/
         ├── catalogo/      (62 imagens: textura + ambiente dos 31 padrões, WebP 720x540)
+        ├── hero-*.webp    (texturas de fundo em 2400 px e versão mobile)
         ├── chapa-*.webp   (chapas inteiras no cavalete, 1400 e 760 px)
         ├── ambiente-*.webp
         ├── logo-petra-sinter*.png, favicon e ícones

@@ -4,8 +4,8 @@
   "lang": "pt-BR",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#2C2F33",
-  "theme_color": "#2C2F33",
+  "background_color": "#161615",
+  "theme_color": "#161615",
   "icons": [
     {"src": "/assets/img/icon-192.png", "sizes": "192x192", "type": "image/png"},
     {"src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png"}
