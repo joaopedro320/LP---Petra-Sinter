@@ -60,47 +60,16 @@
     revs.forEach(function (el) { el.classList.add('is-in'); });
   }
 
-  /* hero: tres barras do simbolo trocando de lamina */
-  var barras = document.querySelector('.hero__barras');
-  if (barras) {
-    requestAnimationFrame(function () { barras.classList.add('is-in'); });
-    var trios = [
-      [['calacatta-gold', 'Calacatta Gold 8008'], ['veios-da-noite', 'Veios da Noite 8022'], ['atlantida-esmeralda', 'Atlântida Esmeralda 8037']],
-      [['taj-mahal', 'Taj Mahal 8045'], ['ouro-negro', 'Ouro Negro 8025'], ['purpura-imperial', 'Púrpura Imperial 8033']],
-      [['aurora-glacial', 'Aurora Glacial 8034'], ['travertino-toscano', 'Travertino Toscano 8017'], ['zenite-noturno', 'Zênite Noturno 8026']]
-    ];
-    trios.slice(1).forEach(function (t) { t.forEach(function (p) { var im = new Image(); im.src = 'assets/img/catalogo/' + p[0] + '-textura.webp'; }); });
-    var imgs = barras.querySelectorAll('.barra__img');
-    var leg = barras.querySelector('.js-legenda');
-    var atual = 0;
-    if (!reduz) {
-      setInterval(function () {
-        if (document.hidden) return;
-        atual = (atual + 1) % trios.length;
-        var t = trios[atual];
-        imgs.forEach(function (el, i) {
-          setTimeout(function () {
-            el.style.opacity = 0;
-            setTimeout(function () {
-              el.style.backgroundImage = 'url(assets/img/catalogo/' + t[i][0] + '-textura.webp)';
-              el.style.opacity = 1;
-            }, 450);
-          }, i * 160);
-        });
-        if (leg) setTimeout(function () { leg.textContent = t.map(function (p) { return p[1]; }).join(', '); }, 600);
-      }, 5200);
-    }
-  }
-
-  /* parallax leve */
+  /* parallax leve: fundo de marmore do hero e foto do showroom */
+  var heroBg = document.querySelector('.hero__bg');
   var showImg = document.querySelector('.showroom__img');
-  if (!reduz && (barras || showImg)) {
+  if (!reduz && (heroBg || showImg)) {
     var tick = false;
     window.addEventListener('scroll', function () {
       if (tick) return; tick = true;
       requestAnimationFrame(function () {
         var y = window.scrollY;
-        if (barras && y < 900) barras.style.transform = 'translateY(' + (y * 0.08) + 'px)';
+        if (heroBg && y < 1000) heroBg.style.transform = 'scaleX(-1) translateY(' + (y * 0.12) + 'px)';
         if (showImg && window.innerWidth > 600) {
           var r = showImg.parentElement.getBoundingClientRect();
           if (r.bottom > 0 && r.top < window.innerHeight) {
