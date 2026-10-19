@@ -30,7 +30,7 @@ Landing page B2B da **Petra Sinter**, distribuidora 100% focada em lâminas sint
 - **Tipografia:** Montserrat (títulos), por ser a família mais próxima das letras do logo, como o cliente pediu no briefing; Inter (texto). Se a Pâmella confirmar a fonte exata do logo, troque no `<link>` do Google Fonts e na variável `--f-tit`.
 - **Fundo:** mesclado, como marcado no briefing (hero, tecnologia, formulário e rodapé escuros; modelo B2B, catálogo, passos, públicos, garantia e FAQ claros).
 - **Logo:** `assets/img/logo-petra-sinter.png` (grafite) e `logo-petra-sinter-branco.png` (branco com ouro), gerados a partir dos PDFs da pasta Logo.
-- **Elemento assinatura (v2):** o hero usa a lâmina Ouro Negro 8025 do próprio catálogo em tela cheia, preto com veio dourado, que é a mesma linguagem das barras do símbolo. A mesma textura aparece no selo de garantia e a Zênite Noturno no fundo do formulário. O ângulo das barras do logo aparece nos marcadores, nos números do passo a passo e no selo.
+- **Elemento assinatura (v2):** o hero usa a lâmina Ouro Negro do próprio catálogo em tela cheia, preto com veio dourado, que é a mesma linguagem das barras do símbolo. A mesma textura aparece no selo de garantia e a Zênite Noturno no fundo do formulário. O ângulo das barras do logo aparece nos marcadores, nos números do passo a passo e no selo.
 
 ## Histórico
 
