@@ -142,3 +142,15 @@ Sugestão de conversão principal no Google Ads/Meta: `form_submit` e `whatsapp_
 - Resumo de contrato enviado pelo Malta (15/10/2026)
 - `Garantia/certificado-garantia.pdf`, `icones-acabamentos.pdf`, pasta `Logo/` e `Fotos - Catalogo Classic/` (31 padrões)
 - Site atual petrasinter.com.br (paleta e contatos para comparação)
+
+## Assinatura de e-mail (`/assinatura/`)
+
+Pasta fixa com as imagens usadas nas assinaturas de e-mail da equipe. **Não renomeie nem apague estes arquivos em atualizações do site**, porque o Gmail busca a imagem pela URL toda vez que um e-mail é aberto.
+
+| Arquivo | URL pública |
+|---|---|
+| Logo | `https://www.petrasinter.com.br/assinatura/logo-petra-sinter.png` |
+| LinkedIn | `https://www.petrasinter.com.br/assinatura/linkedin.png` |
+| Instagram | `https://www.petrasinter.com.br/assinatura/instagram.png` |
+
+**Compatibilidade com o site antigo:** o `vercel.json` tem `rewrites` que entregam essas imagens para qualquer caminho de imagem que não exista mais e tenha "logo", "linkedin" ou "instagram" no nome (ex.: `/wp-content/uploads/.../Logo-Petra.png`). Os rewrites só agem quando o arquivo não existe, então não afetam as imagens do site novo. Quando a URL exata da assinatura antiga for descoberta, vale adicionar um rewrite específico para ela.
