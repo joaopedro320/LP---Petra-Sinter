@@ -4,19 +4,69 @@
   "headers": [
     {
       "source": "/assets/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assinatura/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
     },
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
       ]
     },
     {
       "source": "/obrigado.html",
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*[Ll][Oo][Gg][Oo].*\\.(?:png|PNG|jpe?g|JPE?G|gif|GIF|webp|svg))",
+      "destination": "/assinatura/logo-petra-sinter.png"
+    },
+    {
+      "source": "/(.*[Ll][Ii][Nn][Kk][Ee][Dd][Ii][Nn].*\\.(?:png|PNG|jpe?g|JPE?G|gif|GIF|webp|svg))",
+      "destination": "/assinatura/linkedin.png"
+    },
+    {
+      "source": "/(.*[Ii][Nn][Ss][Tt][Aa][Gg][Rr][Aa][Mm].*\\.(?:png|PNG|jpe?g|JPE?G|gif|GIF|webp|svg))",
+      "destination": "/assinatura/instagram.png"
     }
   ]
 }
